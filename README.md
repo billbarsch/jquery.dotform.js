@@ -36,3 +36,109 @@ nomeando cada elemento (input text,password,textarea...) com notações no segui
   &lt;/form&gt;</p>
 ---------------------------------------------------------------------------
 
+
+-Resultado:
+
+O plugin lê os dados do formulário html e retorna um objeto javascritp que pode ser transformado para json (JSON.stringify()) no seguinte formato:
+
+<p>[{<br />
+&quot;value&quot;: &quot;form&quot;,<br />
+&quot;children&quot;: {<br />
+&quot;empresa&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_empresa&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;cliente&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_cliente&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;vendedor&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_vendedor&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;item&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_item1&quot;,<br />
+&quot;children&quot;: {<br />
+&quot;produto&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_produto do item1&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;tamanho&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_tamanho1 do produto do item1&quot;,<br />
+&quot;children&quot;: {<br />
+&quot;quantidade&quot;: [{<br />
+&quot;value&quot;: &quot;quantidade do tamanho1 do item1&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;descricao&quot;: [{<br />
+&quot;value&quot;: &quot;descricao do tamanho1 do item1&quot;,<br />
+&quot;children&quot;: {}<br />
+}]<br />
+}<br />
+}, {<br />
+&quot;value&quot;: &quot;codigo_tamanho2 do item1&quot;,<br />
+&quot;children&quot;: {<br />
+&quot;quantidade&quot;: [{<br />
+&quot;value&quot;: &quot;quantidade do tamanho2 do item1&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;descricao&quot;: [{<br />
+&quot;value&quot;: &quot;descricao do tamanho2 do item1&quot;,<br />
+&quot;children&quot;: {}<br />
+}]<br />
+}<br />
+}],<br />
+&quot;quantidade&quot;: [{<br />
+&quot;value&quot;: &quot;quantidade do item1&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;preco&quot;: [{<br />
+&quot;value&quot;: &quot;preco do item1&quot;,<br />
+&quot;children&quot;: {}<br />
+}]<br />
+}<br />
+}, {<br />
+&quot;value&quot;: &quot;codigo_item2&quot;,<br />
+&quot;children&quot;: {<br />
+&quot;produto&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_produto do item2&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;tamanho&quot;: [{<br />
+&quot;value&quot;: &quot;codigo_tamanho1 do produto do item2&quot;,<br />
+&quot;children&quot;: {<br />
+&quot;quantidade&quot;: [{<br />
+&quot;value&quot;: &quot;quantidade do tamanho1 do item2&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;descricao&quot;: [{<br />
+&quot;value&quot;: &quot;descricao do tamanho1 do item2&quot;,<br />
+&quot;children&quot;: {}<br />
+}]<br />
+}<br />
+}, {<br />
+&quot;value&quot;: &quot;codigo_tamanho2 do item2&quot;,<br />
+&quot;children&quot;: {<br />
+&quot;quantidade&quot;: [{<br />
+&quot;value&quot;: &quot;quantidade do tamanho2 do item2&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;descricao&quot;: [{<br />
+&quot;value&quot;: &quot;descricao do tamanho2 do item2&quot;,<br />
+&quot;children&quot;: {}<br />
+}]<br />
+}<br />
+}],<br />
+&quot;quantidade&quot;: [{<br />
+&quot;value&quot;: &quot;quantidade do item2&quot;,<br />
+&quot;children&quot;: {}<br />
+}],<br />
+&quot;preco&quot;: [{<br />
+&quot;value&quot;: &quot;preco do item2&quot;,<br />
+&quot;children&quot;: {}<br />
+}]<br />
+}<br />
+}]<br />
+}<br />
+}]</p>
+
