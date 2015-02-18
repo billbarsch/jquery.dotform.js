@@ -142,3 +142,6 @@ O plugin lê os dados do formulário html e retorna um objeto javascript que pod
   }
 ]
 </pre>
+
+#TODO
+-Melhorar o código para retirar os elementos: "children:{}" em branco que aparecem no resultado json final.
