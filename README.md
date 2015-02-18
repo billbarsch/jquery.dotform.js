@@ -1,7 +1,6 @@
 # jquery.dotform.js
 
 ##Já pensou poder nomear campos de formulários html desta forma?
--------------------------------------------------------------------
 <pre>
 empresa
 cliente
@@ -14,8 +13,7 @@ item.tamanho
 item.tamanho.quantidade
 item.tamanho.descricao
 </pre>
-
-##E obter um resultado json parecido com este:
+##e obter um resultado json parecido com este:
 <pre>
 formulario: {
     empresa: "sdfsdf",
@@ -36,7 +34,6 @@ formulario: {
     total_pedido:   "asdfsd"
 }
 </pre>
-
 #Com o jquery.dotform.js é possível!
 Este plugin tem o objetivo de transformar dados de um formulário html para um objeto javascript 
 e possivelmente ser enviado para o servidor (PHP por exemplo) em formato json.
