@@ -13,6 +13,10 @@ item.tamanho
 item.tamanho.quantidade
 item.tamanho.descricao
 </pre>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 ##e obter um resultado json parecido com este:
 <pre>
 formulario: {
