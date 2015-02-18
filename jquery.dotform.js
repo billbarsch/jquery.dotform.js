@@ -22,10 +22,7 @@ jQuery.fn.dotform = function(action){
 		}
 	}
 	function gera_formulario(elemento_form){
-		var form_name = "form";
-		if(typeof $(elemento_form).name !='undefined')
-		form_name = $(elemento_form).name;
-
+		var form_name = $(elemento_form).attr("name") || "form";
 		var form = [{value:form_name,
 			children:{}
 		}];
