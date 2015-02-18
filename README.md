@@ -1,27 +1,26 @@
 # jquery.dotform.js
 
-#Já pensou poder nomear campos de formulários desta forma:
+##Já pensou poder nomear campos de formulários desta forma?
 -------------------------------------------------------------------
-<pre>
-<form id="pedido">
-  <input type='text' dotname='empresa'    value='codigo_empresa'>
-  <input type='text' dotname='cliente'    value='codigo_cliente'>
-  <input type='text' dotname='vendedor'   value='codigo_vendedor'>
- 
-  <input type='text' dotname='item' 			             value='codigo_item1'>
-  <input type='text' dotname='item.produto' 		       value='codigo_produto do item1'>
-  <input type='text' dotname='item.tamanho' 		       value='codigo_tamanho1 do produto do item1'>
-  <input type='text' dotname='item.tamanho.quantidade' value='quantidade do tamanho1 do item1'>
-  <input type='text' dotname='item.tamanho.descricao'  value='descricao do tamanho1 do item1'>
-  <input type='text' dotname='item.tamanho' 		       value='codigo_tamanho2 do item1'>
-  <input type='text' dotname='item.tamanho.quantidade' value='quantidade do tamanho2 do item1'>
-  <input type='text' dotname='item.tamanho.descricao'  value='descricao do tamanho2 do item1'>
-  <input type='text' dotname='item.quantidade'         value='quantidade do item1'>
-  <input type='text' dotname='item.preco' 	           value='preco do item1'>
 
-  <button type="submit">Enviar...</button>
-</form>
-</pre>
+<p>&lt;form id=&quot;pedido&quot;&gt;<br />
+&lt;input type='text' dotname='empresa'&gt;<br />
+&lt;input type='text' dotname='cliente'&gt;<br />
+&lt;input type='text' dotname='vendedor'&gt;<br />
+<br />
+&lt;input type='text' dotname='item'&gt;<br />
+&lt;input type='text' dotname='item.produto'&gt;<br />
+&lt;input type='text' dotname='item.tamanho'&gt;<br />
+&lt;input type='text' dotname='item.tamanho.quantidade'&gt;<br />
+&lt;input type='text' dotname='item.tamanho.descricao'&gt;<br />
+&lt;input type='text' dotname='item.tamanho'&gt;<br />
+&lt;input type='text' dotname='item.tamanho.quantidade'&gt;<br />
+&lt;input type='text' dotname='item.tamanho.descricao'&gt;<br />
+&lt;input type='text' dotname='item.quantidade'&gt;<br />
+&lt;input type='text' dotname='item.preco'&gt;</p>
+<p> &lt;button type=&quot;submit&quot;&gt;Enviar...&lt;/button&gt;<br />
+  &lt;/form&gt;</p>
+<p>&nbsp; </p>
 
 #Com o jquery.dotform.js é possível!
 Este plugin tem o objetivo de transformar dados de um formulário html para um objeto javascript 
