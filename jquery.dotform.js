@@ -27,14 +27,8 @@ jQuery.fn.dotform = function(action){
 			children:{}
 		}];
 		//busca campos e sai criando chaves...
-<<<<<<< Updated upstream
-		$(elemento_form).find(".dotfield").each(function(){
-			if($(this).attr("dotname"))
-=======
 		$(elemento_form).find("[dotname]").each(function(){
->>>>>>> Stashed changes
 			cria_chave(form,$(this).attr("dotname"),$(this).val());
-			else return false;
 		});
 		return form;
 	}
