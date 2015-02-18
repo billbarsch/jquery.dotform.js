@@ -1,7 +1,47 @@
 # jquery.dotform.js
 
-##Já pensou poder nomear campos de formulários desta forma?
+##Já pensou poder nomear campos de formulários html desta forma?
 -------------------------------------------------------------------
+<pre>
+empresa
+cliente
+vendedor
+
+item
+item.produto
+item.quantidade
+item.tamanho
+item.tamanho.quantidade
+item.tamanho.descricao
+</pre>
+
+##E obter um resultado json parecido com este:
+<pre>
+formulario: {
+    empresa: "sdfsdf",
+    cliente: "adkfjs",
+    vendedor:"sdfsdf",
+    item:    "fasdfs",
+        produto:    "sdfsdf",
+        quantidade: "sdfdfs",
+        tamanho:    "ssdfsd",
+            quantidade: "asdfas",
+            descricao:  "sdafss"
+    item:    "fasdfs",
+        produto:    "sdfsdf",
+        quantidade: "sdfdfs",
+        tamanho:    "ssdfsd",
+            quantidade: "asdfas",
+            descricao:  "sdafss"
+    total_pedido:   "asdfsd"
+}
+</pre>
+
+#Com o jquery.dotform.js é possível!
+Este plugin tem o objetivo de transformar dados de um formulário html para um objeto javascript 
+e possivelmente ser enviado para o servidor (PHP por exemplo) em formato json.
+A diferença desta forma de se trabalhar com formulários é que todos os dados do formulário podem ser enviados 
+nomeando cada elemento (input text,password,textarea...) com notações no seguinte formato:
 
 <p>&lt;form id=&quot;pedido&quot;&gt;<br />
 &lt;input type='text' dotname='empresa'&gt;<br />
@@ -21,19 +61,6 @@
 <p> &lt;button type=&quot;submit&quot;&gt;Enviar...&lt;/button&gt;<br />
   &lt;/form&gt;</p>
 <p>&nbsp; </p>
-
-#Com o jquery.dotform.js é possível!
-Este plugin tem o objetivo de transformar dados de um formulário html para um objeto javascript 
-e possivelmente ser enviado para o servidor (PHP por exemplo) em formato json.
-A diferença desta forma de se trabalhar com formulários é que todos os dados do formulário podem ser enviados 
-nomeando cada elemento (input text,password,textarea...) com notações no seguinte formato:
-
-item
-item.produto
-item.quantidade
-item.tamanho
-item.tamanho.quantidade.
-item.tamanho.descricao
 
 #Resultado:
 O plugin lê os dados do formulário html e retorna um objeto javascritp que pode ser transformado para json (JSON.stringify()) no seguinte formato:
