@@ -28,7 +28,9 @@ jQuery.fn.dotform = function(action){
 		}];
 		//busca campos e sai criando chaves...
 		$(elemento_form).find(".dotfield").each(function(){
+			if($(this).attr("dotname"))
 			cria_chave(form,$(this).attr("dotname"),$(this).val());
+			else return false;
 		});
 		return form;
 	}
