@@ -28,6 +28,13 @@ e possivelmente ser enviado para o servidor (PHP por exemplo) em formato json.
 A diferença desta forma de se trabalhar com formulários é que todos os dados do formulário podem ser enviados 
 nomeando cada elemento (input text,password,textarea...) com notações no seguinte formato:
 
+item
+item.produto
+item.quantidade
+item.tamanho
+item.tamanho.quantidade.
+item.tamanho.descricao
+
 #Resultado:
 O plugin lê os dados do formulário html e retorna um objeto javascritp que pode ser transformado para json (JSON.stringify()) no seguinte formato:
 <pre>
