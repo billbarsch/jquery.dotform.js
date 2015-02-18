@@ -63,7 +63,7 @@ nomeando cada elemento (input text,password,textarea...) com notações no segui
 <p>&nbsp; </p>
 
 #Resultado:
-O plugin lê os dados do formulário html e retorna um objeto javascritp que pode ser transformado para json (JSON.stringify()) no seguinte formato:
+O plugin lê os dados do formulário html e retorna um objeto javascript que pode ser transformado para json (JSON.stringify()) no seguinte formato:
 <pre>
 [
   {
