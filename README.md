@@ -167,7 +167,7 @@ O mesmo resultado pode ser alcançado usando a nomeclatura dotname:
 &lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.descricao.&quot; value=&quot;&quot;&gt;</pre>
 Estes elementos podem ser clonados e multiplicados em vários níveis que o formato resultante dos dados acontece exatamente da forma como se espera!
 ##Como usar?
-1 - Você deve incluir tanto o jQuery quanto o jquery.dotform.js no cabeçalho da sua pagina:
+1 - Você deve incluir tanto o jQuery quanto o jquery.dotform.js no cabeçalho da sua página:
 <pre>
 <p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;<br />
 &lt;script src=&quot;jquery.dotform.js&quot;&gt;&lt;/script&gt;</p></pre>
@@ -193,3 +193,4 @@ Bill Barsch
 
 #TODO
 -Melhorar o código para retirar os elementos: "children:{}" em branco que aparecem no resultado json final.
+-Estudar a necessidade de retirar chaves de arrays quando estes contiverem apenas 1 (um) elemento, talvez assim melhorando a leitura do json resultante.
