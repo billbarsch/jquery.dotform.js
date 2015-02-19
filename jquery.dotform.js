@@ -7,16 +7,15 @@ jQuery.fn.dotform = function(action){
 			if(i==(chaves.length-1)){
 				//verifica se caminho existe/é array
 				if(Array.isArray(nivel_acessado[chaves[i]])){
-					nivel_acessado[chaves[i]].push({value:valor,
-						children:{}
+					nivel_acessado[chaves[i]].push({value:valor
 					});
 				}else{
-					nivel_acessado[chaves[i]] = [{value:valor,
-						children:{}
-					}]
+					nivel_acessado[chaves[i]] = [{value:valor
+					}];
 				}
 			}
 			ultimo = nivel_acessado[chaves[i]].length-1;
+			nivel_acessado[chaves[i]][ultimo].children = {};
 			var estou_em = nivel_acessado[chaves[i]][ultimo].children;
 			nivel_acessado = estou_em;
 		}
