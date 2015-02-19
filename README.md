@@ -54,7 +54,8 @@ A diferença desta forma de se trabalhar com formulários é que todos os dados 
 &lt;input type='text' dotname='item.preco'&gt;
 &lt;button type=&quot;submit&quot;&gt;Enviar...&lt;/button&gt;
 &lt;/form&gt;</pre>
-#Resultado:
+
+##Resultado:
 
 O plugin lê os dados do formulário html e retorna um objeto javascript que pode ser transformado para json (JSON.stringify()) no seguinte formato:
 <pre>
