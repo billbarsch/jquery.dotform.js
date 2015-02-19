@@ -169,8 +169,8 @@ Estes elementos podem ser clonados e multiplicados em vários níveis que o form
 ##Como usar?
 1 - Você deve incluir tanto o jQuery quanto o jquery.dotform.js no cabeçalho da sua página:
 <pre>
-<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;<br />
-&lt;script src=&quot;jquery.dotform.js&quot;&gt;&lt;/script&gt;</p></pre>
+&lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;jquery.dotform.js&quot;&gt;&lt;/script&gt;</pre>
 2 - A nomeclatura dos campos (input/textarea/select) deve estar dentro do atributo: dotname=“” e seguir o padrão:
 <pre>
 <p>&lt;input type=&quot;text&quot; dotname=&quot;pai.filho&quot;&gt;</p></pre>
