@@ -164,7 +164,7 @@ O mesmo resultado pode ser alcançado usando a nomeclatura dotname:
 &lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt;<br />
 &lt;input type=&quot;text&quot; dotname=&quot;item.tamanho&quot; value=&quot;&quot;&gt;<br />
 &lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.quantidade&quot; value=&quot;&quot;&gt;<br />
-&lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.descricao.&quot; value=&quot;&quot;&gt;</pre>
+&lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.descricao&quot; value=&quot;&quot;&gt;</pre>
 Estes elementos podem ser clonados e multiplicados em vários níveis que o formato resultante dos dados acontece exatamente da forma como se espera!
 ##Como usar?
 1 - Você deve incluir tanto o jQuery quanto o jquery.dotform.js no cabeçalho da sua página:
@@ -185,6 +185,11 @@ Estes elementos podem ser clonados e multiplicados em vários níveis que o form
 &lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt; &lt;!— cria-se uma nova chave para um novo item, todos os elementos abaixo ficarão dentro desta nova &quot;chave&quot; —&gt;<br />
 &lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt; &lt;!— quantidade do item 2 —&gt;<br />
 &lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt; &lt;!— valor do item 2 —&gt;</pre>
+5 - Por fim, basta chamar a função do plugin para retornar o objeto javascript estruturado:
+<pre>var dados_estruturados = $(&quot;#seu_formulario&quot;).dotform();<br />
+var json = JSON.stringify(dados_estruturados);<br />
+…<br />
+&lt;!— Enviar o string resultado: json por ajax… —&gt;</pre>
 ##Autoria e licença
 O jquery.dotform.js é livre para uso quaisquer sejam os fins.
 ##Dúvidas e sugestões:
