@@ -60,9 +60,8 @@ A diferença desta forma de se trabalhar com formulários é que todos os dados 
 #Resultado:
 O plugin lê os dados do formulário html e retorna um objeto javascript que pode ser transformado para json (JSON.stringify()) no seguinte formato:
 <pre>
-[
   {
-    "value": "form",
+    "value": “nome_formulario”,
     "children": {
       "empresa": [
         {
@@ -135,8 +134,25 @@ O plugin lê os dados do formulário html e retorna um objeto javascript que pod
       ]
     }
   }
-]
 </pre>
+
+##Como usar?
+1 - Você deve incluir tanto o jQuery quanto o jquery.dotform.js no cabeçalho da sua pagina:
+<pre>
+<p>&lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;<br />
+&lt;script src=&quot;./js/jquery.dotform.js&quot;&gt;&lt;/script&gt;</p>
+</pre>
+2 - A nomeclatura dos campos (input/textarea/select) deve estar dentro do atributo: dotname=“” e seguir o padrão:
+<pre>
+<p>&lt;input type=&quot;text&quot; dotname=&quot;pai.filho&quot;&gt;</p>
+</pre>
+3 - Atenção! Só é possivel nomear um elemento “filho” depois que existir um elemento pai no código html anterior a ele (exemplo:)
+<pre>
+&lt;input type=&quot;text&quot; dotname=&quot;item_do_pedido&quot; value=&quot;&quot;&gt; &lt;!— cria-se primeiro o elemento &quot;pai&quot; —&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item_do_pedido.quantidade&quot; value=&quot;&quot;&gt; &lt;!— logo após, cria-se o elemnto &quot;filho&quot; —&gt;
+</pre>
+
+   
 
 #TODO
 -Melhorar o código para retirar os elementos: "children:{}" em branco que aparecem no resultado json final.
