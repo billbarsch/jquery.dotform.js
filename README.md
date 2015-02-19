@@ -166,7 +166,7 @@ Nomeando os elementos html da forma convencional seria:
 <input type="text" name="item[0][tamanho][0][descricao]"> 
 ```
 A administração dos nomes destes elementos se torna complicada quando há a necessidade de incluir novos campos dinamicamente por javascript (jquery) pelo usuario.
-Torna-se necessário criar funções que calculem a quantidade de itens adicionados, nomeação correta e trabalhosa e o trabalho só aumenta quanto mais profunda é a complexidade dos dados. O jquery.dotform.js vem para acabar com tudo isso! O mesmo resultado pode ser alcançado usando a nomenclatura dotname:
+Torna-se necessário criar funções que calculem a quantidade de itens adicionados e o trabalho só aumenta quanto mais profunda é a complexidade dos dados. O jquery.dotform.js vem para acabar com tudo isso! O mesmo resultado pode ser alcançado usando a nomenclatura dotname:
 ```html
 <input type="text" dotname="cliente"> 
 <input type="text" dotname="item"> 
