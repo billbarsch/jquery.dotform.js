@@ -148,22 +148,22 @@ quantidade do tamanho e descrição do tamanho (para cada tamanho de item)
 </pre>
 Nomeando os elementos html da forma convencional seria:
 <pre>&lt;input type=&quot;text&quot; name=&quot;cliente&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; name=&quot;item[0]&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; name=&quot;item[0][quantidade]&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; name=&quot;item[0][valor]&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0]&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0][quantidade]&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; name=&quot;item[0]&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; name=&quot;item[0][quantidade]&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; name=&quot;item[0][valor]&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0]&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0][quantidade]&quot; value=&quot;&quot;&gt;<br />
 &lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0][descricao]&quot; value=&quot;&quot;&gt;</pre>
 A administração dos nomes destes elementos se torna complicada quando há a necessidade de incluir novos campos dinamicamente por javascript (jquery) pelo usuario.
 Torna-se necessário criar funções que calculem a quantidade de itens adicionados, nomeação correta e trabalhosa e o trabalho só aumenta quanto mais profunda é a complexidade dos dados.
 <span style=“color=#00F”>O jquery.dotform.js vem para acabar com tudo isso!</span>
 O mesmo resultado pode ser alcançado usando a nomeclatura dotname:
 <pre>&lt;input type=&quot;text&quot; dotname=&quot;cliente&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item.tamanho&quot; value=&quot;&quot;&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.quantidade&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item.tamanho&quot; value=&quot;&quot;&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.quantidade&quot; value=&quot;&quot;&gt;<br />
 &lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.descricao.&quot; value=&quot;&quot;&gt;</pre>
 Estes elementos podem ser clonados e multiplicados em vários níveis que o formato resultante dos dados acontece exatamente da forma como se espera!
 ##Como usar?
@@ -180,10 +180,10 @@ Estes elementos podem ser clonados e multiplicados em vários níveis que o form
 &lt;input type=&quot;text&quot; dotname=&quot;item_do_pedido.quantidade&quot; value=&quot;&quot;&gt; &lt;!— logo após, cria-se o elemnto &quot;filho&quot; —&gt;</pre>
 4 - A simples inclusão de um novo elemento no código html indica que os elementos abaixo deverão fazer parte daquele elemento superior (exemplo):
 <pre>&lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt; &lt;!— cria-se um elemento item, todos os elementos abaixo ficarão dentro desta &quot;chave&quot; —&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt; &lt;!— quantidade do item 1 —&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt; &lt;!— valor do item 1 —&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt; &lt;!— cria-se uma nova chave para um novo item, todos os elementos abaixo ficarão dentro desta nova &quot;chave&quot; —&gt;<br />
-  &lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt; &lt;!— quantidade do item 2 —&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt; &lt;!— quantidade do item 1 —&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt; &lt;!— valor do item 1 —&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt; &lt;!— cria-se uma nova chave para um novo item, todos os elementos abaixo ficarão dentro desta nova &quot;chave&quot; —&gt;<br />
+&lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt; &lt;!— quantidade do item 2 —&gt;<br />
 &lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt; &lt;!— valor do item 2 —&gt;</pre>
 ##Autoria e licença
 O jquery.dotform.js é livre para uso quaisquer sejam os fins.
