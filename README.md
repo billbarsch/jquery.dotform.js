@@ -40,8 +40,7 @@ A diferença desta forma de se trabalhar com formulários é que todos os dados 
 <pre>&lt;form id=&quot;pedido&quot;&gt;
 &lt;input type='text' dotname='empresa'&gt;
 &lt;input type='text' dotname='cliente'&gt;
-&lt;input type='text' dotname='vendedor'&gt;
-<br />
+&lt;input type='text' dotname='vendedor'&gt;<br />
 &lt;input type='text' dotname='item'&gt;
 &lt;input type='text' dotname='item.produto'&gt;
 &lt;input type='text' dotname='item.tamanho'&gt;
