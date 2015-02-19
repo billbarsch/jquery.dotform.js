@@ -186,7 +186,7 @@ Estes elementos podem ser clonados e multiplicados em vários níveis que o form
 <pre>&lt;input type=&quot;text&quot; dotname=&quot;pai.filho&quot;&gt;</pre>
 3 - Atenção! Só é possivel nomear um elemento “filho” depois que existir um elemento pai no código html anterior a ele (exemplo):
 <pre>&lt;input type=&quot;text&quot; dotname=&quot;item_do_pedido&quot; value=&quot;&quot;&gt; &lt;!— cria-se primeiro o elemento &quot;pai&quot; —&gt;
-&lt;input type=&quot;text&quot; dotname=&quot;item_do_pedido.quantidade&quot; value=&quot;&quot;&gt; &lt;!— logo após, cria-se o elemnto &quot;filho&quot; —&gt;</pre>
+&lt;input type=&quot;text&quot; dotname=&quot;item_do_pedido.quantidade&quot; value=&quot;&quot;&gt; &lt;!— logo após, cria-se o elemento &quot;filho&quot; —&gt;</pre>
 4 - A simples inclusão de um novo elemento no código html indica que os elementos abaixo deverão fazer parte daquele elemento superior (exemplo):
 <pre>&lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt; &lt;!— cria-se um elemento item, todos os elementos abaixo ficarão dentro desta &quot;chave&quot; —&gt;
 &lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt; &lt;!— quantidade do item 1 —&gt;
