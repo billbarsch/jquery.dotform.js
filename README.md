@@ -35,10 +35,8 @@ formulario: {
 }
 </pre>
 #Com o jquery.dotform.js é possível!
-Este plugin tem o objetivo de transformar dados de um formulário html para um objeto javascript 
-e possivelmente ser enviado para o servidor (PHP por exemplo) em formato json.
-A diferença desta forma de se trabalhar com formulários é que todos os dados do formulário podem ser enviados 
-nomeando cada elemento (input text,password,textarea...) com notações no seguinte formato:
+Este plugin tem o objetivo de transformar dados de um formulário html em um objeto javascript que poderá ser enviado para o servidor (PHP por exemplo) em formato json por ajax.
+A diferença desta forma de se trabalhar com formulários é que todos os dados do formulário podem ser enviados nomeando cada elemento (input text,password,textarea...) com notações no seguinte formato:
 
 <p>&lt;form id=&quot;pedido&quot;&gt;<br />
 &lt;input type='text' dotname='empresa'&gt;<br />
