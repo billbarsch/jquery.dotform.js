@@ -23,7 +23,7 @@ jQuery.fn.dotform = function(action){
 	}
 	function gera_formulario(elemento_form){
 		var form_name = $(elemento_form).attr("name") || "form";
-		var form = [{value:form_name,
+		var form = {value:form_name,
 			children:{}
 		}];
 		//busca campos e sai criando chaves...
