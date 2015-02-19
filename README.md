@@ -145,7 +145,7 @@ O plugin lê os dados do formulário html e retorna um objeto javascript que pod
 }
 ```
 ##Porque usar o jquery.dotform.js?##
-A nomeclatura aceita pelo PHP usando arrays multidimencionais é útil porém em projetos que exigem um nível de profundidade maior dos dados seu uso torna-se confuso.
+A nomenclatura aceita pelo PHP usando arrays multidimencionais é útil porém em projetos que exigem um nível de profundidade maior dos dados seu uso torna-se confuso.
 Imagine que você trabalha com um formulário de pedidos simples. Estes pedidos tem dados como: 
 <pre>
 cliente 
@@ -166,7 +166,7 @@ Nomeando os elementos html da forma convencional seria:
 <input type="text" name="item[0][tamanho][0][descricao]"> 
 ```
 A administração dos nomes destes elementos se torna complicada quando há a necessidade de incluir novos campos dinamicamente por javascript (jquery) pelo usuario.
-Torna-se necessário criar funções que calculem a quantidade de itens adicionados, nomeação correta e trabalhosa e o trabalho só aumenta quanto mais profunda é a complexidade dos dados. O jquery.dotform.js vem para acabar com tudo isso! O mesmo resultado pode ser alcançado usando a nomeclatura dotname:
+Torna-se necessário criar funções que calculem a quantidade de itens adicionados, nomeação correta e trabalhosa e o trabalho só aumenta quanto mais profunda é a complexidade dos dados. O jquery.dotform.js vem para acabar com tudo isso! O mesmo resultado pode ser alcançado usando a nomenclatura dotname:
 ```html
 <input type="text" dotname="cliente"> 
 <input type="text" dotname="item"> 
@@ -182,7 +182,7 @@ Estes elementos podem ser clonados e multiplicados em vários níveis que o form
 <pre>
 &lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;jquery.dotform.js&quot;&gt;&lt;/script&gt;</pre>
-2 - A nomeclatura dos campos (input/textarea/select) deve estar dentro do atributo: dotname=“” e seguir o padrão:
+2 - A nomenclatura dos campos (input/textarea/select) deve estar dentro do atributo: dotname=“” e seguir o padrão:
 <pre>&lt;input type=&quot;text&quot; dotname=&quot;pai.filho&quot;&gt;</pre>
 3 - Atenção! Só é possivel nomear um elemento “filho” depois que existir um elemento pai no código html anterior a ele (exemplo):
 <pre>&lt;input type=&quot;text&quot; dotname=&quot;item_do_pedido&quot; value=&quot;&quot;&gt; &lt;!— cria-se primeiro o elemento &quot;pai&quot; —&gt;
