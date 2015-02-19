@@ -1,7 +1,7 @@
 jQuery.fn.dotform = function(action){
 	function cria_chave(form,caminho,valor){
 		chaves = caminho.split(".");
-		var nivel_acessado = form[form.length-1].children;
+		var nivel_acessado = form.children;
 		for (var i = 0; i < chaves.length; i++){
 			//verifica se está na ponta final do caminho
 			if(i==(chaves.length-1)){
@@ -25,7 +25,7 @@ jQuery.fn.dotform = function(action){
 		var form_name = $(elemento_form).attr("name") || "form";
 		var form = {value:form_name,
 			children:{}
-		}];
+		};
 		//busca campos e sai criando chaves...
 		$(elemento_form).find("[dotname]").each(function(){
 			cria_chave(form,$(this).attr("dotname"),$(this).val());
