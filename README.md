@@ -58,80 +58,89 @@ A diferença desta forma de se trabalhar com formulários é que todos os dados 
 
 O plugin lê os dados do formulário html e retorna um objeto javascript que pode ser transformado para json (JSON.stringify()) no seguinte formato:
 <pre>
-  {
-    "value": “nome_formulario”,
+{
+    "value": "pedido",
     "children": {
-      "empresa": [
-        {
-          "value": "codigo_empresa",
-        }
-      ],
-      "cliente": [
-        {
-          "value": "codigo_cliente",
-        }
-      ],
-      "vendedor": [
-        {
-          "value": "codigo_vendedor",
-        }
-      ],
-      "item": [
-        {
-          "value": "codigo_item1",
-          "children": {
-            "produto": [
-              {
-                "value": "codigo_produto do item1",
-              }
-            ],
-            "tamanho": [
-              {
-                "value": "codigo_tamanho1 do produto do item1",
-                "children": {
-                  "quantidade": [
-                    {
-                      "value": "quantidade do tamanho1 do item1",
+        "empresa": {
+            "value": "codigo_empresa"
+        },
+        "cliente": {
+            "value": "codigo_cliente"
+        },
+        "vendedor": {
+            "value": "codigo_vendedor"
+        },
+        "item": [{
+            "value": "codigo_item1",
+            "children": {
+                "produto": {
+                    "value": "codigo_produto do item1"
+                },
+                "tamanho": [{
+                    "value": "codigo_tamanho1 do produto do item1",
+                    "children": {
+                        "quantidade": {
+                            "value": "quantidade do tamanho1 do item1"
+                        },
+                        "descricao": {
+                            "value": "descricao do tamanho1 do item1"
+                        }
                     }
-                  ],
-                  "descricao": [
-                    {
-                      "value": "descricao do tamanho1 do item1",
+                }, {
+                    "value": "codigo_tamanho2 do item1",
+                    "children": {
+                        "quantidade": {
+                            "value": "quantidade do tamanho2 do item1"
+                        },
+                        "descricao": {
+                            "value": "descricao do tamanho2 do item1"
+                        }
                     }
-                  ]
+                }],
+                "quantidade": {
+                    "value": "quantidade do item1"
+                },
+                "preco": {
+                    "value": "preco do item1"
                 }
-              },
-              {
-                "value": "codigo_tamanho2 do item1",
-                "children": {
-                  "quantidade": [
-                    {
-                      "value": "quantidade do tamanho2 do item1",
+            }
+        }, {
+            "value": "codigo_item2",
+            "children": {
+                "produto": {
+                    "value": "codigo_produto do item2"
+                },
+                "tamanho": [{
+                    "value": "codigo_tamanho1 do produto do item2",
+                    "children": {
+                        "quantidade": {
+                            "value": "quantidade do tamanho1 do item2"
+                        },
+                        "descricao": {
+                            "value": "descricao do tamanho1 do item2"
+                        }
                     }
-                  ],
-                  "descricao": [
-                    {
-                      "value": "descricao do tamanho2 do item1",
+                }, {
+                    "value": "codigo_tamanho2 do item2",
+                    "children": {
+                        "quantidade": {
+                            "value": "quantidade do tamanho2 do item2"
+                        },
+                        "descricao": {
+                            "value": "descricao do tamanho2 do item2"
+                        }
                     }
-                  ]
+                }],
+                "quantidade": {
+                    "value": "quantidade do item2"
+                },
+                "preco": {
+                    "value": "preco do item2"
                 }
-              }
-            ],
-            "quantidade": [
-              {
-                "value": "quantidade do item1",
-              }
-            ],
-            "preco": [
-              {
-                "value": "preco do item1",
-              }
-            ]
-          }
-        }
-      ]
+            }
+        }]
     }
-  }
+}
 </pre>
 ##Porque usar o jquery.dotform.js?
 A nomeclatura aceita pelo PHP usando arrays multidimencionais é útil porém em projetos que exigem um nível de profundidade maior dos dados seu uso torna-se confuso.
