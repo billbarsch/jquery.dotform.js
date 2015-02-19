@@ -1,6 +1,6 @@
 # jquery.dotform.js
 
-##Já pensou poder nomear campos de formulários html desta forma?
+### Já pensou poder nomear campos de formulários html desta forma? ###
 <pre>
 empresa
 cliente
@@ -13,7 +13,7 @@ item.tamanho
 item.tamanho.quantidade
 item.tamanho.descricao
 </pre>
-##e obter um resultado json parecido com este:
+### e obter um resultado json parecido com este: ###
 <pre>
 formulario: {
     empresa: "sdfsdf",
@@ -34,30 +34,32 @@ formulario: {
     total_pedido:   "asdfsd"
 }
 </pre>
-#Com o jquery.dotform.js é possível!
+###Com o jquery.dotform.js é possível!###
 Este plugin tem o objetivo de transformar dados de um formulário html em um objeto javascript que poderá ser enviado para o servidor (PHP por exemplo) em formato json por ajax.
 A diferença desta forma de se trabalhar com formulários é que todos os dados do formulário podem ser enviados nomeando cada elemento (input text,password,textarea...) com notações no seguinte formato:
-<pre>&lt;form id=&quot;pedido&quot;&gt;
-&lt;input type='text' dotname='empresa'&gt;
-&lt;input type='text' dotname='cliente'&gt;
-&lt;input type='text' dotname='vendedor'&gt;<br />
-&lt;input type='text' dotname='item'&gt;
-&lt;input type='text' dotname='item.produto'&gt;
-&lt;input type='text' dotname='item.tamanho'&gt;
-&lt;input type='text' dotname='item.tamanho.quantidade'&gt;
-&lt;input type='text' dotname='item.tamanho.descricao'&gt;
-&lt;input type='text' dotname='item.tamanho'&gt;
-&lt;input type='text' dotname='item.tamanho.quantidade'&gt;
-&lt;input type='text' dotname='item.tamanho.descricao'&gt;
-&lt;input type='text' dotname='item.quantidade'&gt;
-&lt;input type='text' dotname='item.preco'&gt;
-&lt;button type=&quot;submit&quot;&gt;Enviar...&lt;/button&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="pedido"> 
+<input type='text' dotname='empresa'> 
+<input type='text' dotname='cliente'> 
+<input type='text' dotname='vendedor'>
 
-##Resultado:
+<input type='text' dotname='item'> 
+<input type='text' dotname='item.produto'> 
+<input type='text' dotname='item.tamanho'> 
+<input type='text' dotname='item.tamanho.quantidade'> 
+<input type='text' dotname='item.tamanho.descricao'> 
+<input type='text' dotname='item.tamanho'> 
+<input type='text' dotname='item.tamanho.quantidade'> 
+<input type='text' dotname='item.tamanho.descricao'> 
+<input type='text' dotname='item.quantidade'> 
+<input type='text' dotname='item.preco'> 
+<button type="submit">Enviar...</button> 
+</form>
+```
+##Resultado:##
 
 O plugin lê os dados do formulário html e retorna um objeto javascript que pode ser transformado para json (JSON.stringify()) no seguinte formato:
-<pre>
+```javascript
 {
     "value": "pedido",
     "children": {
@@ -141,8 +143,8 @@ O plugin lê os dados do formulário html e retorna um objeto javascript que pod
         }]
     }
 }
-</pre>
-##Porque usar o jquery.dotform.js?
+```
+##Porque usar o jquery.dotform.js?##
 A nomeclatura aceita pelo PHP usando arrays multidimencionais é útil porém em projetos que exigem um nível de profundidade maior dos dados seu uso torna-se confuso.
 Imagine que você trabalha com um formulário de pedidos simples. Estes pedidos tem dados como: 
 <pre>
@@ -154,24 +156,28 @@ tamanhos dos itens (vários para cada item)
 quantidade do tamanho e descrição do tamanho (para cada tamanho de item)
 </pre>
 Nomeando os elementos html da forma convencional seria:
-<pre>&lt;input type=&quot;text&quot; name=&quot;cliente&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;item[0]&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;item[0][quantidade]&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;item[0][valor]&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0]&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0][quantidade]&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; name=&quot;item[0][tamanho][0][descricao]&quot; value=&quot;&quot;&gt;</pre>
+```html
+<input type="text" name="cliente"> 
+<input type="text" name="item[0]"> 
+<input type="text" name="item[0][quantidade]"> 
+<input type="text" name="item[0][valor]"> 
+<input type="text" name="item[0][tamanho][0]"> 
+<input type="text" name="item[0][tamanho][0][quantidade]"> 
+<input type="text" name="item[0][tamanho][0][descricao]"> 
+```
 A administração dos nomes destes elementos se torna complicada quando há a necessidade de incluir novos campos dinamicamente por javascript (jquery) pelo usuario.
 Torna-se necessário criar funções que calculem a quantidade de itens adicionados, nomeação correta e trabalhosa e o trabalho só aumenta quanto mais profunda é a complexidade dos dados. O jquery.dotform.js vem para acabar com tudo isso! O mesmo resultado pode ser alcançado usando a nomeclatura dotname:
-<pre>&lt;input type=&quot;text&quot; dotname=&quot;cliente&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; dotname=&quot;item&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; dotname=&quot;item.tamanho&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.quantidade&quot; value=&quot;&quot;&gt;
-&lt;input type=&quot;text&quot; dotname=&quot;item.tamanho.descricao&quot; value=&quot;&quot;&gt;</pre>
+```html
+<input type="text" dotname="cliente"> 
+<input type="text" dotname="item"> 
+<input type="text" dotname="item.quantidade"> 
+<input type="text" dotname="item.valor"> 
+<input type="text" dotname="item.tamanho"> 
+<input type="text" dotname="item.tamanho.quantidade"> 
+<input type="text" dotname="item.tamanho.descricao"> 
+```
 Estes elementos podem ser clonados e multiplicados em vários níveis que o formato resultante dos dados acontece exatamente da forma como se espera!
-##Como usar?
+##Como usar?##
 1 - Você deve incluir tanto o jQuery quanto o jquery.dotform.js no cabeçalho da sua página:
 <pre>
 &lt;script src=&quot;http://code.jquery.com/jquery-1.11.1.min.js&quot;&gt;&lt;/script&gt;
@@ -189,16 +195,13 @@ Estes elementos podem ser clonados e multiplicados em vários níveis que o form
 &lt;input type=&quot;text&quot; dotname=&quot;item.quantidade&quot; value=&quot;&quot;&gt; &lt;!— quantidade do item 2 —&gt;
 &lt;input type=&quot;text&quot; dotname=&quot;item.valor&quot; value=&quot;&quot;&gt; &lt;!— valor do item 2 —&gt;</pre>
 5 - Por fim, basta chamar a função do plugin para retornar o objeto javascript estruturado:
-<pre>var dados_estruturados = $(&quot;#seu_formulario&quot;).dotform();
+```javascript
+var dados_estruturados = $("#seu_formulario").dotform();
 var json = JSON.stringify(dados_estruturados);
-…
-&lt;!— Enviar o string resultado: json por ajax… —&gt;</pre>
-##Autoria e licença
+//Enviar o string resultado: json por ajax…
+```
+##Autoria e licença##
 O jquery.dotform.js é livre para uso quaisquer sejam os fins.
-##Dúvidas e sugestões:
+##Dúvidas e sugestões:##
 billbarsch@gmail.com
 Bill Barsch
-
-#TODO
--Melhorar o código para retirar os elementos: "children:{}" em branco que aparecem no resultado json final.
--Estudar a necessidade de retirar chaves de arrays quando estes contiverem apenas 1 (um) elemento, talvez assim melhorando a leitura do json resultante.
